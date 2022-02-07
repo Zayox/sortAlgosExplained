@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>PedagoTri</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="./img/dlpng_com_PNG_Domino_Transparent_Domino_PNG_Images____PlusPNG_6970352.png">
+
+
+</head>
+
+<body class="bg-[#012A47]">
+
+<h1 class="text-white text-7xl absolute lg:left-[40vw] md:left-[30vw] top-[10vh]">Bubble sort</h1>
+
+<div class="mt-8 ml-8 hover:cursor-pointer z-[2] absolute" id="burger-menu">
+  <div class="h-[5px] bg-white w-[30px] rounded-sm"></div>
+  <div class="h-[5px] bg-white w-[30px] rounded-sm mt-1"></div>
+  <div class="h-[5px] bg-white w-[30px] rounded-sm mt-1"></div>
+</div>
+
+<div class="h-[100vh] lg:w-[10vw] w-[14vw] bg-blue-400 absolute top-0 pt-24 pl-4 duration-1000 left-[-20vw]" id="sideBar">
+  <ul class="text-white lg:text-2xl">
+    <a href=""><li class="mt-6 hover:text-sky-800">Bubble sort</li></a>
+    <a href=""><li class="mt-6 hover:text-sky-800">Quick sort</li></a>
+    <a href=""><li class="mt-6 hover:text-sky-800">gngngn sort</li></a>
+    <a href=""><li class="mt-6 hover:text-sky-800">gngngn sort</li></a>
+  </ul>
+</div>
+
+  <h1 class="text-white text-3xl absolute left-[15vw] top-[40vh]" id="step">Step : 1</h1>
+  <div class="h-32 w-32 rounded-md bg-sky-400 text-white text-3xl pt-12 pl-14 absolute left-[40vw] top-[50vh]" id="1">1</div>
+  <div class="h-32 w-32 rounded-md bg-sky-400 text-white text-3xl pt-12 pl-14 absolute left-[30vw] top-[50vh]" id="2">2</div>
+  <div class="h-32 w-32 rounded-md bg-sky-400 text-white text-3xl pt-12 pl-14 absolute left-[60vw] top-[50vh]" id="3">3</div>
+  <div class="h-32 w-32 rounded-md bg-sky-400 text-white text-3xl pt-12 pl-14 absolute left-[70vw] top-[50vh]" id="4">4</div>
+  <div class="h-32 w-32 rounded-md bg-sky-400 text-white text-3xl pt-12 pl-14 absolute left-[50vw] top-[50vh]" id="5">5</div>
+
+<div class="absolute top-[50vh] left-[15vw]">
+  <form class="flex flex-col w-32">
+    <label class="text-white">Select your mode:</label>
+    <select class="mt-4" id="selector">
+      <option value="Temps réel">Temps réel</option>
+      <option value="Pas à pas">Pas à pas</option>
+    </select>
+    <button class="text-white p-2 bg-blue-400 rounded-md hover:bg-blue-300 mt-4" id="submitBtn">Submit</button>
+  </form>
+</div>
+
+  <button class="p-4 bg-blue-400 rounded-md text-white hover:bg-blue-300 mt-36 absolute left-[70vw] top-[57vh] hidden" id="nextBtn">Next</button>
+  <button class="p-4 bg-blue-400 rounded-md text-white hover:bg-blue-300 mt-36 absolute left-[70vw] top-[57vh]" id="playBtn">Play</button>
+  <button class="p-4 bg-blue-400 rounded-md text-white hover:bg-blue-300 mt-36 absolute left-[60vw] top-[57vh]" id="resetBtn">Reset</button>
+
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
