@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>PedagoTri</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="./img/dlpng_com_PNG_Domino_Transparent_Domino_PNG_Images____PlusPNG_6970352.png">
+</head>
+
+
+<body class="bg-[#012A47]">
+
+<h1 class="text-white text-7xl absolute lg:left-[40vw] md:left-[30vw] top-[10vh]">Tri par sélection</h1>
+
+<div class="mt-8 ml-8 hover:cursor-pointer z-[2] absolute" id="burger-menu">
+    <div class="h-[5px] bg-white w-[30px] rounded-sm"></div>
+    <div class="h-[5px] bg-white w-[30px] rounded-sm mt-1"></div>
+    <div class="h-[5px] bg-white w-[30px] rounded-sm mt-1"></div>
+</div>
+
+<div class="h-[100vh] lg:w-[10vw] w-[14vw] bg-blue-400 absolute top-0 pt-24 pl-4 duration-1000 left-[-20vw]" id="sideBar">
+    <ul class="text-white lg:text-2xl">
+        <a href="bubble.html">
+            <li class="mt-6 hover:text-sky-800">Tri à bulle</li>
+        </a>
+        <a href="linear.html">
+            <li class="mt-6 hover:text-sky-800">Recherche linéaire</li>
+        </a>
+        <a href="index.html">
+            <li class="mt-6 hover:text-sky-800">Accueil</li>
+        </a>
+    </ul>
+</div>
+
+<h1 class="text-white text-3xl absolute lg:left-[15vw] left-[15vw] top-[30vh]" id="step">Etape : 1</h1>
+<div class="lg:h-32 lg:w-32 h-24 w-24 rounded-md bg-sky-400 text-white text-3xl lg:pt-12 lg:pl-14 pt-8 pl-10 absolute left-[40vw] top-[35vh]" id="4">4</div>
+<div class="lg:h-32 lg:w-32 h-24 w-24 rounded-md bg-sky-400 text-white text-3xl lg:pt-12 lg:pl-14 pt-8 pl-10 absolute left-[30vw] top-[35vh]" id="2">2</div>
+<div class="lg:h-32 lg:w-32 h-24 w-24 rounded-md bg-sky-400 text-white text-3xl lg:pt-12 lg:pl-14 pt-8 pl-10 absolute left-[60vw] top-[35vh]" id="3">3</div>
+<div class="lg:h-32 lg:w-32 h-24 w-24 rounded-md bg-sky-400 text-white text-3xl lg:pt-12 lg:pl-14 pt-8 pl-10 absolute left-[70vw] top-[35vh]" id="1">1</div>
+<div class="lg:h-32 lg:w-32 h-24 w-24 rounded-md bg-sky-400 text-white text-3xl lg:pt-12 lg:pl-14 pt-8 pl-10 absolute left-[50vw] top-[35vh]" id="5">5</div>
+
+<div class="absolute top-[37vh] lg:left-[15vw] left-[15vw]">
+    <form class="flex flex-col w-32">
+        <label class="text-white">Choix du mode :</label>
+        <select class="mt-4" id="selector">
+            <option value="Temps réel">Temps réel</option>
+            <option value="Pas à pas">Pas à pas</option>
+        </select>
+        <button class="text-white p-2 bg-blue-400 rounded-md hover:bg-blue-300 mt-4" id="submitBtn">Valider</button>
+    </form>
+</div>
+
+
+<div class="absolute top-[54vh] lg:left-[15vw] left-[15vw]">
+    <form class="flex flex-col w-32">
+        <label class="text-white">Vitesse :</label>
+        <select class="mt-4" id="selector3">
+            <option value="x1">x1</option>
+            <option value="x2">x2</option>
+        </select>
+        <button class="text-white p-2 bg-blue-400 rounded-md hover:bg-blue-300 mt-4" id="submitBtn3">Valider</button>
+    </form>
+</div>
+
+<div class="absolute lg:top-[63vh] top-[95vh] lg:left-[80vw] left-[20vw] z-10">
+    <form class="flex flex-col w-36">
+        <select class="mt-4" id="selector2">
+            <option value="Java">Java</option>
+            <option value="C#">C#</option>
+        </select>
+        <button class="text-white p-2 bg-blue-400 rounded-md hover:bg-blue-300 mt-4" id="submitBtn2">Valider</button>
+    </form>
+</div>
+
+
+<button class="p-4 bg-blue-400 rounded-md text-white hover:bg-blue-300 mt-36 absolute left-[70vw] top-[40vh] hidden" id="nextBtn">Suivant</button>
+<button class="p-4 bg-blue-400 rounded-md text-white hover:bg-blue-300 mt-36 absolute left-[70vw] top-[40vh]" id="playBtn">Lancer</button>
+<button class="p-4 bg-blue-400 rounded-md text-white hover:bg-blue-300 mt-36 absolute left-[55vw] top-[40vh]" id="resetBtn">Redémarrer</button>
+
+<div class="absolute lg:top-[30vh] lg:left-[80vw] top-[60vh] left-[20vw] pb-36" id="javaCode">
+    <div class="h-86 w-68 shadow-lg rounded bg-[#012A47] flex justify-center">
+        <p class="text-blue-400">
+            public static void selectionSort(int[] arr){<br>
+            <span id="firstFor">for (int i = 0; i < arr.length - 1; i++) {</span><br>
+            ㅤint index = i;<br>
+            <span id="secondFor">for (int j = i + 1; j < arr.length; j++){</span><br>
+            ㅤㅤㅤ<span id="ifCondition">if (arr[j] < arr[index]){</span><br>
+            ㅤㅤㅤindex = j;<br>
+            ㅤㅤㅤ}<br>
+            ㅤㅤ}<br>
+            int smallerNumber = arr[index];<br>
+            arr[index] = arr[i];<br>
+            arr[i] = smallerNumber;<br>
+            ㅤ}<br>
+            }<br>
+        </p>
+    </div>
+</div>
+
+<div class="absolute lg:top-[30vh] lg:left-[80vw] top-[60vh] left-[20vw] pb-36 opacity-0" id="c#Code">
+    <div class="h-86 w-68 shadow-lg rounded bg-[#012A47] flex justify-center">
+        <p class="text-blue-400">
+            private void Sort(int[] arr) {<br>
+            int i, j, min;<br>
+            ㅤㅤ<span id="firstFor2">for (i = 0; i < arr.Length; i++) {</span><br>
+            ㅤㅤㅤmin = i;<br>
+            ㅤㅤㅤㅤ<span id="secondFor2">for (j = 0; j < arr.Length; j++) {</span><br>
+            ㅤㅤㅤㅤㅤㅤ<span id="ifCondition2">if (arr[j] > arr[min]) {</span><br>
+            ㅤㅤㅤㅤㅤㅤㅤㅤmin = j;<br>
+            ㅤㅤㅤㅤㅤㅤㅤㅤSwap(ref arr[i], ref arr[min]);<br>
+            ㅤㅤㅤㅤㅤㅤ}<br>
+            ㅤㅤㅤㅤ}<br>
+            ㅤㅤ}<br>
+            }<br>
+        </p>
+    </div>
+</div>
+
+<script src="js/select.js"></script>
+
+</body>
+
+</html>
